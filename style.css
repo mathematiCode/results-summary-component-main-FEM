@@ -1,14 +1,12 @@
 :root {
-    
-
 --reaction-color : hsl(0, 100%, 67%);
---reaction-background: hsl(0, 100%, 95%);
+--reaction-background: hsl(0, 100%, 98%);
 --memory-color : hsl(39, 100%, 56%);
---memory-background : hsl(39, 100%, 95%);
+--memory-background : hsl(39, 100%, 97%);
 --verbal-color : hsl(166, 100%, 37%);
---verbal-background : hsl(166, 100%, 94%);
+--verbal-background : hsl(166, 100%, 97%);
 --visual-color : hsl(234, 85%, 45%);
---visual-background : hsl(234, 85%, 95%);
+--visual-background : hsl(234, 85%, 97%);
 
 --primary-color: hsl(224, 30%, 27%);
 
@@ -71,9 +69,21 @@ font-family: "Hanken Grotesk", sans-serif;
 .container {
     display: flex;
     width: 600px;
-    height: min(55%, 700px);
+    height: min(60%, 800px);
     border-radius: 2em;
     box-shadow: 5px 5px 18px 4px hsl(240, 54%, 95%);
+}
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        width: 300px;
+        height: 750px;
+    }
+    #overall-results,
+    #detailed-results {
+    width: 100% !important;
+}
 }
 
 #score {
@@ -81,15 +91,20 @@ font-family: "Hanken Grotesk", sans-serif;
     font-weight: 700;
 }
 
+#summary {
+    margin-top: 2em;
+    margin-bottom: 1em;
+
+}
+
 p {
     width: 75%;
-    opacity: 60%;
+    opacity: 70%;
 }
 
 h1 {
     font-size: 1.2rem;
-    opacity: 60%;
-
+    opacity: 70%;
 }
 
 #result {
@@ -100,8 +115,10 @@ h1 {
 ul {
     grid-template-rows: 1fr 1fr 1fr 1fr;
     gap: 0.5em;
-    width: 75%;
+    width: 90%;
     padding-left: 0;
+    margin-top: 0;
+    align-items: center;
 }
 
 li {
@@ -110,10 +127,16 @@ li {
     padding: 0.75em;
     margin-top: 0.5em;
     border-radius: 0.5rem;
+    align-items: center;
 }
 
 li > div {
     font-weight: 600;
+}
+
+.icon {
+    margin-right: 6px;
+    align-self: center;
 }
 
 .denom {
@@ -140,22 +163,23 @@ li > div {
 #detailed-results {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-inline: 0;
+    align-items: flex-start;
+    margin-left: 5%;
     justify-content: center;
 }
 
 
 button {
-    width: 75%;
+    width: 90%;
     background-color: var(--primary-color);
     border-radius: 2em;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 1em;
+    padding-bottom: 1em;
     color: white;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    font-weight: 600;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    font-weight: 500;
+    border: 0;
 
 }
 
