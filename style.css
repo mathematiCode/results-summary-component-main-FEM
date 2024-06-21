@@ -32,7 +32,7 @@ color: var(--primary-color);
 }
 
 .attribution {
-    font-size: 11px;
+    font-size: 14px;
     text-align: center;
     background: white;
     left: 0;
@@ -60,19 +60,19 @@ color: var(--primary-color);
 
 .main {
     display: flex;
-    width: 700px;
     margin: auto; 
     inset: 0;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 }
 
 .container {
     display: flex;
-    width: 800px;
-    height: fit-content;
-    position: absolute;
+    width: 600px;
+    height: min(55%, 700px);
     border-radius: 2em;
+    box-shadow: 5px 5px 10px 4px hsl(241, 100%, 94%);
 }
 
 #score {
@@ -83,7 +83,8 @@ color: var(--primary-color);
 ul {
     grid-template-rows: 1fr 1fr 1fr 1fr;
     gap: 0.5em;
-    width: 95%;
+    width: 75%;
+    padding-left: 0;
 }
 
 li {
@@ -107,29 +108,61 @@ li {
     justify-content: center;
     background-color:  hsl(241, 81%, 54%);
     color: white;
+    border-radius: 2em;
 }
 
 #detailed-results {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-inline: 0;
+    justify-content: center;
 }
+
+
+#continue {
+    width: 75%;
+    background-color: var(--primary-color);
+    border-radius: 2em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+
+}
+
 #reaction {
     background-color: var(--reaction-background);
+}
+
+#reaction > div:first-child {
+    color: var(--reaction-color);
 }
 
 #memory {
     background-color: var(--memory-background);
 }
+#memory > div:first-child {
+    color: var(--memory-color);
+}
 
 #verbal {
     background-color: var(--verbal-background);
+}
+#verbal > div:first-child {
+    color: var(--verbal-color);
 }
 
 #visual {
     background-color: var(--visual-background);
 }
+#visual > div:first-child {
+    color: var(--visual-color);
+}
 
 #h3 {
     place-items: center;
+}
+
+#score-explanation {
+    text-align: center;
 }
