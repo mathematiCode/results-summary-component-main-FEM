@@ -180,7 +180,11 @@ button {
     margin-bottom: 2em;
     font-weight: 500;
     border: 0;
+    cursor: pointer;
+}
 
+button:hover, button:focus {
+    background:  linear-gradient(180deg, hsl(252, 100%, 67%) 0%, hsl(241, 81%, 54%) 35% 100%);
 }
 
 #reaction {
