@@ -13,6 +13,7 @@
 --primary-color: hsl(224, 30%, 27%);
 
 color: var(--primary-color);
+font-family: "Hanken Grotesk", sans-serif;
 
 /*
 - Light slate blue (background): hsl(252, 100%, 67%)
@@ -47,7 +48,7 @@ color: var(--primary-color);
 
 #circle {
     border-radius: 10em;
-    background-color: hsl(241, 72%, 46%);
+    background: linear-gradient(180deg, rgb(70, 32, 177), hsl(241, 81%, 55%));
     height: 100px;
     width: 100px;
     text-align: center;
@@ -72,12 +73,28 @@ color: var(--primary-color);
     width: 600px;
     height: min(55%, 700px);
     border-radius: 2em;
-    box-shadow: 5px 5px 10px 4px hsl(241, 100%, 94%);
+    box-shadow: 5px 5px 18px 4px hsl(240, 54%, 95%);
 }
 
 #score {
-    font-size: 2em;
+    font-size: 3em;
     font-weight: 700;
+}
+
+p {
+    width: 75%;
+    opacity: 60%;
+}
+
+h1 {
+    font-size: 1.2rem;
+    opacity: 60%;
+
+}
+
+#result {
+    font-size: 1.5em;
+    font-weight: 600;
 }
 
 ul {
@@ -95,6 +112,14 @@ li {
     border-radius: 0.5rem;
 }
 
+li > div {
+    font-weight: 600;
+}
+
+.denom {
+    opacity: 60%;
+
+}
 
 #overall-results,
 #detailed-results {
@@ -106,9 +131,10 @@ li {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color:  hsl(241, 81%, 54%);
+    background:  linear-gradient(180deg, hsl(252, 100%, 67%) 0%, hsl(241, 81%, 54%) 35% 100%);
     color: white;
     border-radius: 2em;
+    gap: 1em;
 }
 
 #detailed-results {
@@ -120,13 +146,16 @@ li {
 }
 
 
-#continue {
+button {
     width: 75%;
     background-color: var(--primary-color);
     border-radius: 2em;
     padding-top: 10px;
     padding-bottom: 10px;
     color: white;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-weight: 600;
 
 }
 
@@ -160,7 +189,8 @@ li {
 }
 
 #h3 {
-    place-items: center;
+    margin-top: 10px;
+    align-self: flex-start;
 }
 
 #score-explanation {
